@@ -5,7 +5,7 @@ const sgMail = require('@sendgrid/mail')
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
-  sgMail.setApiKey('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')
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const msg = {
     to: 'darkshadow61944@hotmail.com', // Change to your recipient
