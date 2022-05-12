@@ -17,17 +17,6 @@ export class AppService {
     return 'It worked!';
   }
 
-  async getHello2() {
-    await this.producerService.produce({
-      topic: 'ble3',
-      messages: [
-        {
-          value: 'Hello abdo',
-        },
-      ],
-    });
-    return 'It worked!';
-  }
 
   
 }
